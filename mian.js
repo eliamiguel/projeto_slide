@@ -28,13 +28,14 @@ laondImagem(image, containerItens)
 let itens = document.querySelectorAll('.item')
 console.log()
 const voltar = ()=>{
-  containerItens.appendChild(itens[0])
-  itens = document.querySelectorAll('.item')
-  id.innerHTML = document.querySelector('.ids').innerText
-}
-const proximo = ()=>{
   const lastItem = itens[itens.length - 1]
   containerItens.insertBefore(lastItem, itens[0])
+  itens = document.querySelectorAll('.item')
+  id.innerHTML = document.querySelector('.ids').innerText
+  
+}
+const proximo = ()=>{
+  containerItens.appendChild(itens[0])
   itens = document.querySelectorAll('.item')
   id.innerHTML = document.querySelector('.ids').innerText
 }
